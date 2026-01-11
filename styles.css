@@ -1,0 +1,1875 @@
+/**
+ * ScriptNote - 样式表
+ * 定义侧边面板和各组件的样式
+ */
+
+/* ==================== 面板基础样式 ==================== */
+
+.screenplay-side-panel {
+    padding: 0;
+}
+
+.screenplay-panel-content {
+    padding: 12px;
+}
+
+.screenplay-panel-header h3 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-normal);
+}
+
+/* ==================== 区域样式 ==================== */
+
+.screenplay-section {
+    margin-bottom: 16px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.screenplay-section-header {
+    padding: 10px 12px;
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-section-header.screenplay-collapsible {
+    cursor: pointer;
+    user-select: none;
+}
+
+.screenplay-section-header.screenplay-collapsible:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.screenplay-section-header-content {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.screenplay-collapse-icon {
+    font-size: 10px;
+    color: var(--text-muted);
+    width: 12px;
+}
+
+.screenplay-section-header h4 {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-normal);
+}
+
+.screenplay-section-content {
+    padding: 12px;
+}
+
+/* ==================== 按钮样式 ==================== */
+
+.screenplay-button-container {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.screenplay-btn {
+    padding: 6px 12px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.screenplay-btn:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.screenplay-btn-primary {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.screenplay-btn-primary:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+.screenplay-btn-small {
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+.screenplay-btn-icon {
+    padding: 4px 6px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 14px;
+    opacity: 0.7;
+    transition: opacity 0.15s ease;
+}
+
+.screenplay-btn-icon:hover {
+    opacity: 1;
+}
+
+.screenplay-btn-danger {
+    color: var(--text-error);
+}
+
+.screenplay-btn-danger:hover {
+    background-color: var(--background-modifier-error);
+    color: white;
+}
+
+/* ==================== 表单样式 ==================== */
+
+.screenplay-field {
+    margin-bottom: 12px;
+}
+
+.screenplay-field:last-child {
+    margin-bottom: 0;
+}
+
+.screenplay-label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.screenplay-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.screenplay-input:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+.screenplay-textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 13px;
+    font-family: inherit;
+    resize: vertical;
+    min-height: 60px;
+    box-sizing: border-box;
+}
+
+.screenplay-textarea:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+/* ==================== 人物列表样式 ==================== */
+
+.screenplay-character-field {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-character-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.screenplay-character-header .screenplay-label {
+    margin-bottom: 0;
+}
+
+.screenplay-character-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.screenplay-character-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px;
+    margin-bottom: 8px;
+    background-color: var(--background-secondary);
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-character-item:last-child {
+    margin-bottom: 0;
+}
+
+.screenplay-character-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.screenplay-character-name {
+    display: block;
+    font-weight: 500;
+    color: var(--text-normal);
+    margin-bottom: 2px;
+}
+
+.screenplay-character-desc {
+    display: block;
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    word-break: break-word;
+}
+
+.screenplay-character-traits {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 4px;
+}
+
+.screenplay-trait-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    font-size: 11px;
+    background-color: var(--background-modifier-hover);
+    border-radius: 3px;
+    color: var(--text-muted);
+}
+
+.screenplay-character-actions {
+    display: flex;
+    gap: 4px;
+    margin-left: 8px;
+    flex-shrink: 0;
+}
+
+/* ==================== 模态框样式 ==================== */
+
+.screenplay-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.screenplay-modal {
+    background-color: var(--background-primary);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.screenplay-modal-confirm {
+    max-width: 300px;
+    padding: 20px;
+}
+
+.screenplay-modal-confirm p {
+    margin: 0 0 16px 0;
+    text-align: center;
+}
+
+.screenplay-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-modal-header h3 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.screenplay-modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-muted);
+    padding: 0;
+    line-height: 1;
+}
+
+.screenplay-modal-close:hover {
+    color: var(--text-normal);
+}
+
+.screenplay-modal-body {
+    padding: 16px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+.screenplay-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    padding: 16px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+/* ==================== 占位符样式 ==================== */
+
+.screenplay-placeholder {
+    color: var(--text-muted);
+    font-size: 13px;
+    font-style: italic;
+    text-align: center;
+    padding: 16px;
+    margin: 0;
+}
+
+
+/* ==================== 角色选择弹窗样式 ==================== */
+
+.screenplay-character-popup {
+    background-color: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    max-width: 280px;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.screenplay-popup-header {
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-popup-list {
+    overflow-y: auto;
+    max-height: 220px;
+}
+
+.screenplay-popup-item {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--text-normal);
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.screenplay-popup-item:hover,
+.screenplay-popup-item.selected {
+    background-color: var(--background-modifier-hover);
+}
+
+.screenplay-popup-item.selected {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.screenplay-popup-hint {
+    padding: 6px 12px;
+    font-size: 11px;
+    color: var(--text-muted);
+    background-color: var(--background-secondary);
+    border-top: 1px solid var(--background-modifier-border);
+    text-align: center;
+}
+
+.screenplay-popup-empty {
+    padding: 12px;
+}
+
+.screenplay-popup-message {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+
+/* ==================== 子区域标签样式 ==================== */
+
+.screenplay-subsection-label {
+    margin-top: 12px;
+    margin-bottom: 8px;
+    padding-top: 12px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-subsection-label .screenplay-label {
+    margin-bottom: 0;
+}
+
+
+/* ==================== 统计区域样式 ==================== */
+
+.screenplay-stats-subsection {
+    margin-bottom: 16px;
+}
+
+.screenplay-stats-subsection:last-child {
+    margin-bottom: 0;
+}
+
+.screenplay-character-stats-section {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+/* 字数统计样式 */
+.screenplay-word-stats {
+    margin-top: 8px;
+}
+
+.screenplay-stats-total {
+    background-color: var(--background-secondary);
+    border-radius: 6px;
+    padding: 12px;
+    margin-bottom: 12px;
+}
+
+.screenplay-stats-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.screenplay-stats-row.screenplay-stats-highlight {
+    font-weight: 500;
+}
+
+.screenplay-stats-label {
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.screenplay-stats-value {
+    color: var(--text-normal);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* 每集统计样式 */
+.screenplay-episode-stats {
+    margin-top: 12px;
+}
+
+.screenplay-episode-stats-header {
+    margin-bottom: 8px;
+}
+
+.screenplay-episode-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.screenplay-episode-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    margin-bottom: 4px;
+    background-color: var(--background-secondary);
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.screenplay-episode-row:last-child {
+    margin-bottom: 0;
+}
+
+.screenplay-episode-label {
+    color: var(--text-normal);
+}
+
+.screenplay-episode-scene-count {
+    color: var(--text-muted);
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+.screenplay-episode-values {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.screenplay-episode-word {
+    color: var(--text-normal);
+    min-width: 70px;
+    text-align: right;
+}
+
+.screenplay-episode-duration {
+    color: var(--text-muted);
+    font-size: 12px;
+    min-width: 60px;
+    text-align: right;
+}
+
+/* 角色统计样式 */
+.screenplay-character-stats {
+    margin-top: 8px;
+}
+
+.screenplay-character-stats-table {
+    font-size: 13px;
+}
+
+.screenplay-stats-table-header {
+    display: flex;
+    padding: 8px 10px;
+    background-color: var(--background-secondary);
+    border-radius: 4px 4px 0 0;
+    font-weight: 500;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.screenplay-stats-table-row {
+    display: flex;
+    padding: 8px 10px;
+    border-bottom: 1px solid var(--background-modifier-border);
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.screenplay-stats-table-row:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.screenplay-stats-table-row:last-child {
+    border-bottom: none;
+}
+
+.screenplay-stats-row-container:last-child .screenplay-stats-table-row {
+    border-bottom: none;
+}
+
+/* 低出场角色高亮 */
+.screenplay-stats-table-row.screenplay-low-appearance {
+    background-color: rgba(var(--color-yellow-rgb), 0.1);
+}
+
+.screenplay-stats-table-row.screenplay-low-appearance:hover {
+    background-color: rgba(var(--color-yellow-rgb), 0.2);
+}
+
+.screenplay-low-warning {
+    color: var(--text-warning);
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+/* 表格列宽 */
+.screenplay-stats-col-name {
+    flex: 1;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.screenplay-stats-col-scenes,
+.screenplay-stats-col-dialogues,
+.screenplay-stats-col-words {
+    width: 45px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.screenplay-clickable {
+    cursor: pointer;
+}
+
+.screenplay-expand-icon {
+    font-size: 10px;
+    color: var(--text-muted);
+    width: 12px;
+    flex-shrink: 0;
+}
+
+/* 角色出场场景列表 */
+.screenplay-character-scene-list {
+    padding: 8px 10px 8px 26px;
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-character-scene-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 8px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.screenplay-character-scene-item:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.screenplay-character-scene-item:last-child {
+    margin-bottom: 0;
+}
+
+.screenplay-scene-number {
+    font-weight: 500;
+    color: var(--interactive-accent);
+    min-width: 40px;
+}
+
+.screenplay-scene-location {
+    color: var(--text-muted);
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ==================== 场景大纲样式 ==================== */
+
+.screenplay-outline-section .screenplay-section-content {
+    padding: 12px;
+}
+
+/* 标签过滤器 */
+.screenplay-tag-filter {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-tag-filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.screenplay-tag-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 6px;
+}
+
+.screenplay-tag-btn {
+    padding: 4px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 12px;
+    background-color: var(--background-primary);
+    color: var(--text-muted);
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.screenplay-tag-btn:hover {
+    background-color: var(--background-modifier-hover);
+    color: var(--text-normal);
+}
+
+.screenplay-tag-btn-active {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border-color: var(--interactive-accent);
+}
+
+.screenplay-tag-btn-active:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+.screenplay-insert-tag-container {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed var(--background-modifier-border);
+}
+
+.screenplay-tag-insert-btn {
+    opacity: 0.8;
+}
+
+.screenplay-tag-insert-btn:hover {
+    opacity: 1;
+}
+
+.screenplay-placeholder-inline {
+    color: var(--text-muted);
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* 场景大纲列表 */
+.screenplay-outline-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* 集分组 */
+.screenplay-outline-episode-group {
+    margin-bottom: 12px;
+}
+
+.screenplay-outline-episode-group:last-child {
+    margin-bottom: 0;
+}
+
+.screenplay-outline-episode-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 10px;
+    background-color: var(--background-secondary);
+    border-radius: 4px;
+    margin-bottom: 6px;
+}
+
+.screenplay-outline-episode-title {
+    font-weight: 500;
+    color: var(--text-normal);
+    font-size: 13px;
+}
+
+.screenplay-outline-episode-count {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+/* 场景列表 */
+.screenplay-outline-scene-list {
+    padding-left: 8px;
+}
+
+/* 场景项 */
+.screenplay-outline-scene-item {
+    padding: 8px 10px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.screenplay-outline-scene-item:hover {
+    background-color: var(--background-modifier-hover);
+    border-color: var(--interactive-accent);
+}
+
+.screenplay-outline-scene-item:last-child {
+    margin-bottom: 0;
+}
+
+/* 场景主信息行 */
+.screenplay-outline-scene-main {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.screenplay-outline-scene-number {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    color: var(--interactive-accent);
+    font-size: 13px;
+    min-width: 40px;
+}
+
+.screenplay-outline-flashback-badge {
+    display: inline-block;
+    padding: 1px 4px;
+    font-size: 10px;
+    font-weight: 500;
+    background-color: var(--color-purple);
+    color: white;
+    border-radius: 3px;
+}
+
+.screenplay-outline-scene-location {
+    flex: 1;
+    color: var(--text-normal);
+    font-size: 13px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.screenplay-outline-scene-time {
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 2px 6px;
+    background-color: var(--background-secondary);
+    border-radius: 3px;
+}
+
+/* 场景标签 */
+.screenplay-outline-scene-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 6px;
+}
+
+.screenplay-outline-tag-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 11px;
+    background-color: var(--background-modifier-hover);
+    color: var(--text-muted);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.screenplay-outline-tag-badge:hover {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+/* 场景摘要 */
+.screenplay-outline-scene-summary {
+    margin-top: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ==================== 导出区域样式 ==================== */
+
+.screenplay-export-section .screenplay-section-content {
+    padding: 12px;
+}
+
+.screenplay-export-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.screenplay-export-btn {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.screenplay-export-btn:hover {
+    background-color: var(--background-modifier-hover);
+    border-color: var(--interactive-accent);
+}
+
+.screenplay-export-btn:active {
+    transform: translateY(1px);
+}
+
+/* ==================== 项目区域样式 ==================== */
+
+.screenplay-project-section {
+    background-color: var(--background-secondary-alt);
+}
+
+.screenplay-project-info {
+    margin-bottom: 12px;
+    padding: 10px;
+    background-color: var(--background-primary);
+    border-radius: 6px;
+    border: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-project-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-normal);
+    margin-bottom: 4px;
+}
+
+.screenplay-project-path {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    word-break: break-all;
+}
+
+.screenplay-project-stats {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.screenplay-no-project {
+    margin-bottom: 12px;
+    padding: 10px;
+    background-color: var(--background-primary);
+    border-radius: 6px;
+    border: 1px dashed var(--background-modifier-border);
+    text-align: center;
+}
+
+.screenplay-no-project .screenplay-placeholder {
+    margin: 0 0 8px 0;
+    color: var(--text-muted);
+}
+
+.screenplay-hint {
+    font-size: 11px;
+    color: var(--text-faint);
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+/* ==================== 预设管理样式 ==================== */
+
+.screenplay-preset-management {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-preset-field {
+    margin-bottom: 12px;
+}
+
+.screenplay-preset-field:last-child {
+    margin-bottom: 0;
+}
+
+.screenplay-preset-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.screenplay-preset-header .screenplay-label {
+    margin-bottom: 0;
+}
+
+.screenplay-preset-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.screenplay-preset-tag-container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.screenplay-preset-tag {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 12px;
+    border-radius: 12px;
+    transition: all 0.15s ease;
+}
+
+.screenplay-preset-default {
+    background-color: var(--background-secondary);
+    color: var(--text-muted);
+    border: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-preset-custom {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border: 1px solid var(--interactive-accent);
+    padding-right: 24px;
+}
+
+.screenplay-preset-delete {
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 14px;
+    height: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: var(--text-on-accent);
+    opacity: 0.7;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.15s ease;
+}
+
+.screenplay-preset-delete:hover {
+    opacity: 1;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.screenplay-recent-locations {
+    background-color: var(--background-secondary);
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.screenplay-recent-tag {
+    background-color: var(--background-primary);
+    color: var(--text-muted);
+    border: 1px dashed var(--background-modifier-border);
+}
+
+/* 小型模态框 */
+.screenplay-modal-small {
+    max-width: 320px;
+}
+
+
+/* ==================== 场景插入对话框样式 ==================== */
+
+.screenplay-scene-insert-modal {
+    max-width: 380px;
+}
+
+.screenplay-select-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.screenplay-select {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.screenplay-select:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+.screenplay-select optgroup {
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.screenplay-select option {
+    font-weight: normal;
+    color: var(--text-normal);
+    padding: 4px 8px;
+}
+
+.screenplay-custom-input {
+    font-size: 12px;
+    padding: 6px 10px;
+}
+
+.screenplay-custom-input::placeholder {
+    color: var(--text-faint);
+    font-style: italic;
+}
+
+.screenplay-radio-group {
+    display: flex;
+    gap: 16px;
+}
+
+.screenplay-radio-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    color: var(--text-normal);
+}
+
+.screenplay-radio-label input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+}
+
+.screenplay-radio-label span {
+    user-select: none;
+}
+
+
+/* ==================== AI 生成功能样式 ==================== */
+
+/* 字段标题行（包含 AI 按钮） */
+.screenplay-field-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.screenplay-field-header .screenplay-label {
+    margin-bottom: 0;
+}
+
+/* 标题按钮容器 */
+.screenplay-header-buttons {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+}
+
+/* AI 生成按钮 */
+.screenplay-ai-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    font-size: 11px;
+    padding: 3px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    opacity: 0.9;
+}
+
+.screenplay-ai-btn:hover {
+    opacity: 1;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.4);
+}
+
+.screenplay-ai-btn:active {
+    transform: translateY(0);
+}
+
+.screenplay-ai-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* AI 预览对话框 */
+.screenplay-ai-preview-modal {
+    max-width: 500px;
+}
+
+.screenplay-ai-preview-textarea {
+    min-height: 200px;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* AI 预览对话框按钮区域 */
+.screenplay-ai-preview-modal .screenplay-modal-footer {
+    justify-content: space-between;
+}
+
+.screenplay-ai-preview-modal .screenplay-modal-footer .screenplay-btn:first-child {
+    margin-right: auto;
+}
+
+
+/* ==================== 场景头格式验证高亮样式 ==================== */
+
+/* 错误行背景高亮 */
+.screenplay-scene-header-error-line {
+    background-color: rgba(var(--color-red-rgb), 0.1);
+}
+
+/* 错误文本下划线 */
+.screenplay-scene-header-error-text {
+    text-decoration: wavy underline var(--text-error);
+    text-decoration-skip-ink: none;
+}
+
+/* 错误提示 Widget */
+.screenplay-scene-header-error-tooltip {
+    color: var(--text-error);
+    font-size: 12px;
+    font-style: italic;
+    margin-left: 8px;
+    opacity: 0.9;
+    white-space: nowrap;
+}
+
+/* 悬停时显示完整提示 */
+.screenplay-scene-header-error-tooltip:hover {
+    opacity: 1;
+}
+
+
+/* ==================== 标签页样式 ==================== */
+
+.screenplay-tabs {
+    display: flex;
+    border-bottom: 1px solid var(--background-modifier-border);
+    margin-bottom: 12px;
+}
+
+.screenplay-tab {
+    flex: 1;
+    padding: 10px 16px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text-muted);
+    border-bottom: 2px solid transparent;
+    transition: all 0.15s ease;
+}
+
+.screenplay-tab:hover {
+    color: var(--text-normal);
+    background-color: var(--background-modifier-hover);
+}
+
+.screenplay-tab.active {
+    color: var(--interactive-accent);
+    border-bottom-color: var(--interactive-accent);
+    font-weight: 500;
+}
+
+.screenplay-tab-content {
+    padding: 0;
+}
+
+/* ==================== 字数统计样式 ==================== */
+
+.screenplay-stats-content {
+    padding: 8px 0;
+}
+
+.screenplay-stat-section {
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-stat-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.screenplay-stat-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.screenplay-stat-total {
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.screenplay-stat-number {
+    font-weight: 600;
+    color: var(--interactive-accent);
+}
+
+.screenplay-stat-episodes {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.screenplay-stat-episode {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* 人物统计样式 */
+.screenplay-char-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.screenplay-char-container {
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.screenplay-char-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 10px;
+    background-color: var(--background-secondary);
+    font-size: 13px;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+    gap: 8px;
+}
+
+.screenplay-char-item:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.screenplay-char-item.expanded {
+    background-color: var(--background-modifier-hover);
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-char-expand-icon {
+    font-size: 10px;
+    color: var(--text-muted);
+    width: 12px;
+    flex-shrink: 0;
+}
+
+.screenplay-char-name {
+    color: var(--text-normal);
+    font-weight: 500;
+    flex: 1;
+}
+
+.screenplay-char-episodes {
+    color: var(--text-muted);
+    font-size: 11px;
+    padding: 2px 6px;
+    background-color: var(--background-primary);
+    border-radius: 10px;
+}
+
+.screenplay-char-count {
+    color: var(--interactive-accent);
+    font-size: 12px;
+    font-weight: 500;
+    min-width: 45px;
+    text-align: right;
+}
+
+/* 人物出场详情样式 */
+.screenplay-char-detail {
+    padding: 8px 10px;
+    background-color: var(--background-primary);
+}
+
+.screenplay-char-episode-group {
+    margin-bottom: 8px;
+}
+
+.screenplay-char-episode-group:last-child {
+    margin-bottom: 0;
+}
+
+.screenplay-char-episode-header {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed var(--background-modifier-border);
+}
+
+.screenplay-char-preview-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.screenplay-char-preview-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+    font-size: 12px;
+}
+
+.screenplay-char-preview-item:hover {
+    background-color: var(--background-modifier-hover);
+}
+
+.screenplay-char-line-num {
+    color: var(--interactive-accent);
+    font-weight: 500;
+    min-width: 40px;
+    flex-shrink: 0;
+}
+
+.screenplay-char-preview-text {
+    color: var(--text-muted);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.screenplay-char-more-hint {
+    font-size: 11px;
+    color: var(--text-faint);
+    font-style: italic;
+    padding: 4px 8px;
+}
+
+/* ==================== 按钮行样式 ==================== */
+
+.screenplay-button-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.screenplay-subsection-label {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 12px 0 8px 0;
+    padding-top: 8px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+/* ==================== 占位区域样式 ==================== */
+
+.screenplay-placeholder-section {
+    padding: 24px;
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.screenplay-placeholder-section p {
+    margin: 8px 0;
+}
+
+.screenplay-hint {
+    font-size: 12px;
+    color: var(--text-faint);
+}
+
+/* ==================== 非剧本文件提示样式 ==================== */
+
+.screenplay-not-screenplay-hint {
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.screenplay-hint-icon {
+    font-size: 48px;
+    margin-bottom: 12px;
+}
+
+.screenplay-not-screenplay-hint h4 {
+    margin: 0 0 16px 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-normal);
+}
+
+.screenplay-hint-status {
+    margin-bottom: 20px;
+    text-align: left;
+    padding: 12px;
+    background-color: var(--background-secondary);
+    border-radius: 6px;
+}
+
+.screenplay-status-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 0;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.screenplay-status-icon {
+    font-size: 14px;
+    width: 18px;
+    text-align: center;
+}
+
+.screenplay-status-icon.success {
+    color: var(--color-green);
+}
+
+.screenplay-status-icon.warning {
+    color: var(--color-orange);
+}
+
+.screenplay-hint-actions {
+    margin-bottom: 16px;
+}
+
+.screenplay-hint-tip {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 8px 0;
+}
+
+.screenplay-hint-settings {
+    font-size: 12px;
+    color: var(--text-faint);
+}
+
+.screenplay-hint-settings a {
+    color: var(--interactive-accent);
+    cursor: pointer;
+}
+
+.screenplay-hint-settings a:hover {
+    text-decoration: underline;
+}
+
+/* 项目信息栏样式 */
+.screenplay-project-info-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    background-color: var(--background-secondary);
+    border-radius: 6px;
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.screenplay-project-icon {
+    font-size: 14px;
+}
+
+.screenplay-project-name-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 已有项目列表样式 */
+.screenplay-existing-projects {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-projects-title {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.screenplay-projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.screenplay-project-item {
+    padding: 6px 10px;
+    background-color: var(--background-secondary);
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--text-normal);
+}
+
+
+/* ==================== 全宽按钮样式 ==================== */
+
+.screenplay-btn-full {
+    width: 100%;
+    margin-bottom: 8px;
+    padding: 10px 16px;
+    font-size: 14px;
+}
+
+.screenplay-btn-full:last-child {
+    margin-bottom: 0;
+}
+
+/* ==================== 项目选择器模态框样式 ==================== */
+
+.screenplay-project-selector-modal {
+    max-width: 360px;
+}
+
+.screenplay-project-select-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.screenplay-project-select-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 14px;
+    background-color: var(--background-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    border: 1px solid transparent;
+}
+
+.screenplay-project-select-item:hover {
+    background-color: var(--background-modifier-hover);
+    border-color: var(--interactive-accent);
+}
+
+.screenplay-project-select-icon {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.screenplay-project-select-name {
+    font-size: 14px;
+    color: var(--text-normal);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+/* ==================== 人物统计删除按钮样式 ==================== */
+
+.screenplay-char-delete-btn {
+    font-size: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.15s ease, color 0.15s ease;
+    padding: 0 4px;
+    margin-left: 4px;
+}
+
+.screenplay-char-item:hover .screenplay-char-delete-btn {
+    opacity: 0.6;
+}
+
+.screenplay-char-delete-btn:hover {
+    opacity: 1 !important;
+    color: var(--text-error);
+}
+
+/* 恢复排除项区域 */
+.screenplay-char-restore {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 10px;
+    margin-top: 8px;
+    background-color: var(--background-secondary);
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.screenplay-char-restore-text {
+    color: var(--text-muted);
+}
+
+/* ==================== 设置页面命令列表样式 ==================== */
+
+.scriptnote-command-list {
+    margin: 8px 0 16px 0;
+    padding-left: 20px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.scriptnote-command-list li {
+    margin-bottom: 4px;
+}
+
+
+/* ==================== @ 人物选择弹窗样式 ==================== */
+
+.screenplay-at-popup {
+    background-color: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    max-width: 280px;
+    max-height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.screenplay-at-popup .screenplay-popup-header {
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-at-popup .screenplay-popup-list {
+    overflow-y: auto;
+    max-height: 220px;
+}
+
+.screenplay-at-popup .screenplay-popup-item {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--text-normal);
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.screenplay-at-popup .screenplay-popup-item:hover,
+.screenplay-at-popup .screenplay-popup-item.selected {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.screenplay-at-popup .screenplay-popup-hint {
+    padding: 6px 12px;
+    font-size: 11px;
+    color: var(--text-muted);
+    background-color: var(--background-secondary);
+    border-top: 1px solid var(--background-modifier-border);
+    text-align: center;
+}
+
+.screenplay-at-popup .screenplay-popup-empty-item {
+    padding: 12px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-align: center;
+    font-style: italic;
+}
+
+/* ==================== Tab 修饰符选择弹窗样式 ==================== */
+
+.screenplay-modifier-popup {
+    background-color: var(--background-primary);
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    min-width: 160px;
+    max-width: 240px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.screenplay-modifier-popup .screenplay-popup-header {
+    padding: 8px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--text-muted);
+    background-color: var(--background-secondary);
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.screenplay-modifier-popup .screenplay-popup-list {
+    overflow-y: auto;
+}
+
+.screenplay-modifier-popup .screenplay-popup-item {
+    padding: 8px 12px;
+    font-size: 14px;
+    color: var(--text-normal);
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+
+.screenplay-modifier-popup .screenplay-popup-item:hover,
+.screenplay-modifier-popup .screenplay-popup-item.selected {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+}
+
+.screenplay-modifier-popup .screenplay-popup-hint {
+    padding: 6px 12px;
+    font-size: 11px;
+    color: var(--text-muted);
+    background-color: var(--background-secondary);
+    border-top: 1px solid var(--background-modifier-border);
+    text-align: center;
+}
+
+/* 自定义情绪输入框 */
+.screenplay-popup-input-wrapper {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.screenplay-popup-input-wrapper span {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.screenplay-popup-input {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary);
+    color: var(--text-normal);
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.screenplay-popup-input:focus {
+    outline: none;
+    border-color: var(--interactive-accent);
+    box-shadow: 0 0 0 2px var(--interactive-accent-hover);
+}
+
+.screenplay-popup-input::placeholder {
+    color: var(--text-faint);
+    font-style: italic;
+}

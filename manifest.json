@@ -1,0 +1,10 @@
+{
+  "id": "scriptnote",
+  "name": "ScriptNote",
+  "version": "1.1.0",
+  "minAppVersion": "1.0.0",
+  "description": "Obsidian 短剧剧本写作插件，提供智能场景编号、设定管理、AI 辅助等功能",
+  "author": "",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}
